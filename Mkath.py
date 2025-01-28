@@ -1,7 +1,7 @@
 import streamlit as st
 import google.generativeai as genai
 
-gemini_api_key = st.secrets['gemini_api']
+gemini_api_key = st.secrets['gemini_key']
 
 
 
