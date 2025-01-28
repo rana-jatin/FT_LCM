@@ -6,7 +6,7 @@ gemini_api_key = st.secrets['gemini_key']
 
 
 # Main chat interface
-st.title(":female_genie:  Genie :female_genie:")
+st.title("  Genie :female_genie:")
 st.caption("!!:ghost:  HAKUNA MATATA :ghost:!!")
 
 # Initialize message history
