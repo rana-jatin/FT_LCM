@@ -47,7 +47,7 @@ st.chat_message("user").write(prompt)
 
     # Get Gemini response
 try:
-        response = model.generate_content(prompt ,safety_settings={
+        response = model.generate_content("I am a medical professional seeking information for educational purposes.Please provide a concise response to the following medical question :"+prompt ,safety_settings={
         HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
         HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
         HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
