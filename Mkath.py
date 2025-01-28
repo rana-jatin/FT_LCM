@@ -25,7 +25,20 @@ if prompt := st.chat_input():
 
     # Configure Gemini
     genai.configure(api_key=gemini_api_key)
-    model = genai.GenerativeModel("tunedModels/mergeddatajsonl-g7atpb6m5g1p")
+    generation_config = {
+  "temperature": 0.4,
+  "top_p": 0.95,
+  "top_k": 64,
+  "max_output_tokens": 8192,
+  "response_mime_type": "text/plain",
+}
+
+model = genai.GenerativeModel(
+  model_name="tunedModels/mergeddatajsonl-g7atpb6m5g1p",
+  generation_config=generation_config,
+)
+   
+   
 
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
