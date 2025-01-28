@@ -24,8 +24,8 @@ if prompt := st.chat_input():
         st.stop()
 
     # Configure Gemini
-    genai.configure(api_key=gemini_api_key)
-    generation_config = {
+genai.configure(api_key=gemini_api_key)
+generation_config = {
   "temperature": 0.4,
   "top_p": 0.95,
   "top_k": 64,
