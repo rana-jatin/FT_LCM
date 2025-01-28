@@ -41,11 +41,11 @@ model = genai.GenerativeModel(
    
 
     # Add user message to chat history
-    st.session_state.messages.append({"role": "user", "content": prompt})
-    st.chat_message("user").write(prompt)
+st.session_state.messages.append({"role": "user", "content": prompt})
+st.chat_message("user").write(prompt)
 
     # Get Gemini response
-    try:
+try:
         response = model.generate_content(prompt)
         msg = response.text
 
@@ -53,5 +53,5 @@ model = genai.GenerativeModel(
         st.session_state.messages.append({"role": "assistant", "content": msg})
         st.chat_message("assistant").write(msg)
 
-    except Exception as e:
+except Exception as e:
         st.error(f"An error occurred: {str(e)}")
