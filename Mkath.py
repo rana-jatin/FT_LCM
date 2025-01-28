@@ -1,8 +1,7 @@
-!pip install google-generativeai
 import streamlit as st
 import google.generativeai as genai
 
-gemini_api_key = "AIzaSyDdsz2PL3hOFiKZmq-tLLbaFulLJUWuUVA"
+gemini_api_key = st.secrets['gemini_api']
 
 
 
